@@ -1,0 +1,10 @@
+class Data:
+    valid_username = "yegudin@gmail.com"
+    valid_password = "Fel27081980!"
+    login_url = "https://partners.xyte.io/auth/sign-in"
+    friendly_name = "test"
+    description = "air condition"
+    name_sent_to_device = "cool"
+    friendly_name_failure = "reboot"
+    success_message = "Add supported command successful"
+    failure_message = "Add supported command error\nName has already been taken,\nFriendly name has already been taken"

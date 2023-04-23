@@ -32,6 +32,18 @@ class ActionOnPage(BasePage):
     def find_element(self, selector):
         self.element_is_visible(selector)
 
+    def window_handels(self, driver):
+        # get instance of first pop up  window
+        whandle = driver.window_handles[1]
+        # get instance of first pop up  window
+        whandle = driver.window_handles[1]
+        # switch to pop up window
+        driver.switch_to.window(whandle)
+        # get text of an element in pop window
+        elem = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div[2]").text
+        return elem
+
+
     def login(self):
         self._enter_username(data.valid_username)
         self._enter_password(data.valid_password)

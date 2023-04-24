@@ -3,7 +3,7 @@ from ..locators.login_page_locators import LoginPageLocators as LP
 from ui_selenium.data.test_data import Data as data
 
 
-class ActionOnPage(BasePage):
+class LoginPage(BasePage):
 
     def __init__(self, driver, url):
         super().__init__(driver, url)

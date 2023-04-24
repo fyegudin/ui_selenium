@@ -1,4 +1,4 @@
-from ui_selenium.pages.login_page import ActionOnPage
+from ui_selenium.pages.login_page import LoginPage
 from ui_selenium.data.test_data import Data as data
 from ui_selenium.locators.home_page_locators import HomePageLocators as HP
 from ..locators.models_page_locators import ModelsPageLocators as MP
@@ -9,7 +9,7 @@ from ..locators.add_supported_command_page_locators import AddSupportedCommandPa
 class TestAddCommand:
 
     def test_create_new_command(self, driver):
-        current_page = ActionOnPage(driver, data.login_url)
+        current_page = LoginPage(driver, data.login_url)
         current_page.login()
         # Navigate to Models > Super Turbo > Supported Commands
         current_page.click_button(HP.MODELS_BUTTON)
@@ -27,7 +27,7 @@ class TestAddCommand:
         current_page.take_screenshot("test_create_new_command_success")
 
     def test_create_duplication_command(self, driver):
-        current_page = ActionOnPage(driver, data.login_url)
+        current_page = LoginPage(driver, data.login_url)
         current_page.login()
         # Navigate to Models > Super Turbo > Supported Commands
         current_page.click_button(HP.MODELS_BUTTON)

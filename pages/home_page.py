@@ -1,9 +1,8 @@
-from ui_selenium.pages.base_page import BasePage
-from .login_page import ActionOnPage
+from .login_page import LoginPage
 from ..locators.home_page_locators import HomePageLocators as HP
 
 
-class HomePage(ActionOnPage):
+class HomePage(LoginPage):
 
     def __init__(self, driver, url):
         super().__init__(driver, url)
